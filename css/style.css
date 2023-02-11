@@ -1,0 +1,12 @@
+.mainDiv{
+    background: rgb(53, 142, 224);
+    display: flex;
+}
+
+.inpDiv{
+    width: 50%;
+}
+
+.listDiv{
+    width: 50%;
+}
