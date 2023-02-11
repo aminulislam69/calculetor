@@ -7,7 +7,7 @@ let inptvalue = document.querySelector(".inptvalue")
 let err = document.querySelector(".err")
 
 
-let value = 4
+let value = 0
 
 
 
@@ -33,14 +33,12 @@ btn.addEventListener("click",function(){
         
 
                 case (add.value) :
+                    value = parseInt(add.value) + value 
+                    
+                    inptvalue.innerHTML = value
 
-               
+                    add.value = ""
 
-                // value = (add.value + value)
-
-                //  inptvalue.innerHTML = value
-                //     // console.log(value = Number(inptvalue.innerHTML) + add.value)
-                //     add.value = " "
                     break;
 
 
@@ -49,10 +47,14 @@ btn.addEventListener("click",function(){
                     console.log(multi.value)
                         if (value == 0){
                             err.innerHTML = " Do Some Addition First"
+                            multi.value = 0
+                            multi.value = ""
         
                         }else if (multi.value == 0 )
                         {
                             err.innerHTML = " Enter a value except 0"
+                            multi.value = 0
+                            multi.value = ""
                         }else{
                             value = (multi.value*value)  
                                 inptvalue.innerHTML = value
